@@ -39,7 +39,7 @@ const getParticularBooks = async function (req, res) {
 
 }
 
-module.exports.createBook= createBook;
+module.exports.createBook= createBook
 module.exports.bookList=bookList;
 module.exports.getBookInYear=getBookInYear;
 module.exports.getXINRBooks=getXINRBooks;
