@@ -1,15 +1,16 @@
 const mongoose = require('mongoose')
 
 const bookSchema = new mongoose.Schema({
-    bookName: {type:String, require:true
+    name: String,
+    author_id : {
+        type : Number,
+        required : true,
     },
-    price:{indianPrice:Number, europeanPrice:Number},
-
-    authorName: String,
-    totalPages:Number,
-    tags:[String],
-    stockAvailable :Boolean
+    price : Number,
+    rating : Number
+    }, 
     
-}, {timestamps: true});  //Automatically created new keys in our database.
+    
+ {timestamps: true});  //Automatically created new keys in our database.
 
 module.exports = mongoose.model('Book',bookSchema) // collection of Books in your database

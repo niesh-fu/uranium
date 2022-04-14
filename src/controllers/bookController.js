@@ -1,7 +1,7 @@
 const bookModels = require("../models/bookModels.js")
-// 1. to create a new entry..use this api to create 11+ entries in your collection
+// 1. to create a news entry..use this api to create 11+ entries in your collection
 
-const createBook= async function (req, res) {
+const createbookModule = async function (req, res) {
     let booksData= req.body
     let savedData = await bookModels.create(booksData)
     res.send({msg: savedData});
