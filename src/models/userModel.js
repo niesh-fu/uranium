@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // import package name mongoose
 
-const userSchema = new mongoose.Schema( {
+const userSchema = new mongoose.Schema({ // invoke schema function of mongoose
     firstName: String,
     lastName: String,
     mobile: {
@@ -11,21 +11,9 @@ const userSchema = new mongoose.Schema( {
     emailId: String,
     gender: {
         type: String,
-        enum: ["male", "female", "LGBTQ"] //"falana" will give an error
+        enum: ["male", "female", "LGBTQ"]
     },
-    age: Number,
-    // isIndian: Boolean,
-    // parentsInfo: {
-    //     motherName: String,
-    //     fatherName: String,
-    //     siblingName: String
-    // },
-    // cars: [ String  ]
+    age: Number
+
 }, { timestamps: true });
-
-module.exports = mongoose.model('User', userSchema) //users
-
-
-
-// String, Number
-// Boolean, Object/json, array
+module.exports = mongoose.model('User', userSchema) // users
